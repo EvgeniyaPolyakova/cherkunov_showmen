@@ -1,0 +1,25 @@
+.footer {
+	background: var(--main-color);
+	padding: 35px 0;
+}
+
+.footerWrap {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.text {
+	color: var(--secondary-color);
+}
+
+.link {
+	text-decoration: none;
+	color: var(--white-grey);
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: var(--secondary-color);
+	}
+}

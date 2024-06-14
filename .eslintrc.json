@@ -1,3 +1,37 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": { "es6": true, "browser": true, "node": true },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "import", "react", "react-hooks", "jsx-a11y"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+    "import/extensions": ["ts", "tsx"]
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": "off",
+    "no-restricted-exports": "off",
+    "no-underscore-dangle": "off",
+    "consistent-return": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "react/function-component-definition": "off",
+    "react/destructuring-assignment": "off",
+    "react/jsx-filename-extension": ["error", { "extensions": [".tsx"] }],
+    "import/prefer-default-export": "off",
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-associated-control": ["error", { "depth": 25 }],
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+  }
 }

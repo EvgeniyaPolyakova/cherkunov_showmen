@@ -1,0 +1,45 @@
+.wrap {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	position: relative;
+}
+
+.container {
+	width: 100%;
+	max-width: 1380px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@media (max-width: 576px) {
+		padding: 0 20px;
+	}
+}
+
+.block {
+	margin-top: 60px;
+}
+
+.title {
+	text-transform: uppercase;
+	color: var(--main-color);
+	font-size: 40px;
+	font-weight: 700;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.visuallyHidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.notification {
+	top: 100px !important;
+}

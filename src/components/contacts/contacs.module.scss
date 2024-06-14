@@ -1,0 +1,75 @@
+.contactList {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	&.bigList {
+		.contactItem {
+			width: 80px;
+			height: 80px;
+
+			svg {
+				width: 40px;
+				height: 40px;
+			}
+		}
+
+		@media (max-width: 760px) {
+			.contactItem {
+				width: 60px;
+				height: 60px;
+
+				svg {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
+	}
+
+	&.green {
+		.contactItem {
+			border: 2px solid var(--main-color);
+
+			svg {
+				color: var(--main-color);
+			}
+
+			&:hover {
+				border: 2px solid var(--main-hover);
+
+				svg {
+					color: var(--main-hover);
+				}
+			}
+		}
+	}
+}
+
+.listItem {
+	list-style-type: none;
+}
+
+.contactItem {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--secondary-color);
+	border-radius: 0 10px 0 10px;
+	width: 40px;
+	height: 40px;
+	transition: border 0.3s ease;
+
+	svg {
+		color: var(--secondary-color);
+		transition: color 0.3s ease;
+	}
+
+	&:hover {
+		border: 1px solid var(--yellow);
+
+		svg {
+			color: var(--yellow);
+		}
+	}
+}

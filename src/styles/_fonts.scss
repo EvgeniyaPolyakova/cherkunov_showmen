@@ -1,0 +1,19 @@
+@mixin font($font-family, $font-path, $font-style, $font-weight) {
+	@font-face {
+		font-weight: $font-weight;
+		font-family: $font-family;
+		font-style: $font-style;
+		font-display: swap;
+		src: url('#{$font-path}.woff') format('woff');
+	}
+}
+
+@include font('Raleway', '/fonts/Raleway-Thin', normal, 100);
+@include font('Raleway', '/fonts/Raleway-ExtraLight', normal, 200);
+@include font('Raleway', '/fonts/Raleway-Light', normal, 300);
+@include font('Raleway', '/fonts/Raleway-Regular', normal, 400);
+@include font('Raleway', '/fonts/Raleway-Medium', normal, 500);
+@include font('Raleway', '/fonts/Raleway-SemiBold', normal, 600);
+@include font('Raleway', '/fonts/Raleway-Bold', normal, 700);
+@include font('Raleway', '/fonts/Raleway-ExtraBold', normal, 800);
+@include font('Raleway', '/fonts/Raleway-Black', normal, 900);

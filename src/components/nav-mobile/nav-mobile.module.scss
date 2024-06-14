@@ -1,0 +1,37 @@
+.menu {
+	position: absolute;
+	right: 0;
+	top: 84px;
+	width: fit-content;
+	background: var(--main-color);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	z-index: 200;
+
+	@media (max-width: 576px) {
+		width: 100%;
+		align-items: flex-end;
+	}
+}
+
+.list {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	list-style-type: none;
+	align-items: flex-end;
+}
+
+.link {
+	text-decoration: none;
+	color: var(--secondary-color);
+	font-size: 24px;
+	font-weight: 400;
+	transition: color 0.3s ease;
+
+	&:hover {
+		color: var(--yellow);
+	}
+}

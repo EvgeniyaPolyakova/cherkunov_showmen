@@ -6,19 +6,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "axios": "^1.7.2",
+    "classnames": "^2.5.1",
+    "formik": "^2.4.6",
+    "framer-motion": "^11.2.6",
+    "hamburger-react": "^2.5.1",
+    "jsdom": "^24.1.0",
+    "next": "14.2.3",
+    "notistack": "^3.0.1",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-imask": "^7.6.1",
+    "react-multi-date-picker": "^4.5.1",
+    "sass": "^1.77.2",
+    "svgo": "^3.3.2",
+    "swiper": "^11.1.4",
+    "usehooks-ts": "^3.1.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/jsdom": "^21.1.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "typescript": "^5"
   }
 }
