@@ -86,6 +86,7 @@ export const Reviews = () => {
 				<LinkComponent
 					href="https://ivanovo.gorko.ru/%D1%82%D0%B0%D0%BC%D0%B0%D0%B4%D0%B0/838431/rating/"
 					classname={s.link}
+					target="_blank"
 				>
 					Посмотреть все
 				</LinkComponent>

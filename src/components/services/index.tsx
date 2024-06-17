@@ -20,6 +20,7 @@ export const Services = () => {
 					<LinkComponent
 						classname={s.link}
 						href="https://vk.com/showmencherkunov?z=photo139008289_457259599%2Falbum139008289_00%2Frev"
+						target="_blank"
 					>
 						Посмотреть все фотографии
 					</LinkComponent>
@@ -48,6 +49,7 @@ export const Services = () => {
 					<LinkComponent
 						classname={s.link}
 						href="https://vk.com/showmencherkunov?z=photo139008289_457259599%2Falbum139008289_00%2Frev"
+						target="_blank"
 					>
 						Посмотреть все фотографии
 					</LinkComponent>
