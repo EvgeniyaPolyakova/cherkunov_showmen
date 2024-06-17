@@ -52,3 +52,88 @@
 	display: flex;
 	gap: 10px;
 }
+
+.likeBtn {
+	background: transparent !important;
+	padding: 0 !important;
+
+	.like {
+		path {
+			fill: transparent;
+			stroke: var(--yellow);
+			stroke-width: 2px;
+			transition: fill 0.3s ease;
+		}
+
+		&.activeLike {
+			path {
+				fill: var(--yellow);
+				transition: fill 0.3s ease;
+			}
+		}
+	}
+
+	&:hover {
+		background: transparent !important;
+	}
+}
+
+.tgBtn {
+	background: transparent !important;
+	padding: 0 !important;
+
+	&:hover {
+		background: transparent !important;
+	}
+
+	.tgIcon {
+		&:hover {
+			path {
+				fill: #7c9ae5;
+				transition: fill 0.3s ease;
+			}
+		}
+	}
+}
+
+.commentBtn {
+	background: transparent !important;
+	padding: 0 !important;
+
+	&:hover {
+		background: transparent !important;
+	}
+
+	.comment {
+		path {
+			transition: stroke 0.3s ease;
+		}
+		&.activeComment {
+			path {
+				stroke: #64d8a6;
+				transition: stroke 0.3s ease;
+			}
+		}
+	}
+}
+
+.saveBtn {
+	background: transparent !important;
+	padding: 0 !important;
+
+	&:hover {
+		background: transparent !important;
+	}
+
+	.saveIcon {
+		path {
+			transition: fill 0.3s ease;
+		}
+		&.activeSave {
+			path {
+				fill: var(--main-hover);
+				transition: fill 0.3s ease;
+			}
+		}
+	}
+}

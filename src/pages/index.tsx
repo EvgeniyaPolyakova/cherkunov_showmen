@@ -8,20 +8,26 @@ import { Reviews } from '@/components/reviews';
 import { Sale } from '@/components/sale';
 import { Services } from '@/components/services';
 import { Steps } from '@/components/steps';
+import Head from 'next/head';
 import React from 'react';
 
 const MainPage = () => {
 	return (
-		<Layout>
-			<Intro />
-			<AboutMe />
-			<Services />
-			<Sale />
-			<Steps />
-			<Reviews />
-			<Form />
-			<Footer />
-		</Layout>
+		<>
+			<Head>
+				<title>Ведущий Юрий Черкунов</title>
+			</Head>
+			<Layout>
+				<Intro />
+				<AboutMe />
+				<Services />
+				<Sale />
+				<Steps />
+				<Reviews />
+				<Form />
+				<Footer />
+			</Layout>
+		</>
 	);
 };
 

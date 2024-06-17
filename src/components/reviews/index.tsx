@@ -19,17 +19,6 @@ export const Reviews = () => {
 	const navigationPrevRef = useRef(null);
 	const navigationNextRef = useRef(null);
 
-	// useEffect(() => {
-	// 	(async () => {
-	// 		try {
-	// 			const data = await axios.post('/api/review-parser');
-	// 			console.log(data);
-	// 		} catch (error: any) {
-	// 			console.log(error);
-	// 		}
-	// 	})();
-	// }, []);
-
 	return (
 		<div id="comment" className={s.reviewsContainer}>
 			<div className={s.firstRing} />
@@ -41,7 +30,6 @@ export const Reviews = () => {
 					<p className={cn(utils.title, s.title)}>Доверие клиентов - мое главное достижение</p>
 				</div>
 
-				{/* <div className={s.reviewsList}> */}
 				<Swiper
 					slidesPerView={1}
 					loop

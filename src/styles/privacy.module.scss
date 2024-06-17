@@ -5,6 +5,10 @@
 .title {
 	text-align: center;
 	margin: 30px 0;
+
+	@media (max-width: 550px) {
+		font-size: 24px;
+	}
 }
 
 .text {
@@ -13,10 +17,42 @@
 
 .subTitle {
 	margin: 15px 0;
+
+	@media (max-width: 550px) {
+		font-size: 20px;
+	}
 }
 
 .list {
 	li {
 		list-style: none;
 	}
+}
+
+.topBtn {
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	bottom: 30px;
+	right: 20px;
+	background: var(--main-color) !important;
+	border: 1px solid rgba(163, 194, 140, 0.2) !important;
+	padding: 15px !important;
+	border-radius: 50% !important;
+	transition:
+		visibility 0.3s ease,
+		opacity 0.3s ease;
+
+	&:hover {
+		background: var(--main-hover) !important;
+	}
+
+	&.visible {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	// @media (min-height: 1000px) {
+	// 	display: block;
+	// }
 }

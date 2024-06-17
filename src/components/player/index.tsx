@@ -1,12 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './player.module.scss';
 import LikeIcon from '@/assets/player/like.svg';
 import CommentIcon from '@/assets/player/comment.svg';
 import TelegramIcon from '@/assets/player/telegram.svg';
 import SaveIcon from '@/assets/player/save.svg';
+import { Button } from '../button';
+import cn from 'classnames';
+import { LinkComponent } from '../link';
 
 export const VkPlayer = () => {
-	// return <script src="https://vk.com/js/api/videoplayer.js" />;
+	const [isLike, setIsLike] = useState<boolean>(true);
+	const [isComment, setIsComment] = useState<boolean>(false);
+	const [isSave, setIsSave] = useState<boolean>(true);
+	const [pageUrl, setPageUrl] = useState<string>('');
+
+	useEffect(() => {
+		setPageUrl(window.location.href.split('#')[0]);
+	}, []);
+
+	const handleClickLikeBtn = () => {
+		setIsLike(prev => !prev);
+	};
+
+	const handleClickCommentBtn = () => {
+		setIsComment(prev => !prev);
+	};
+
+	const handleClickSaveBtn = () => {
+		setIsSave(prev => !prev);
+	};
+
+	// const handleTgShareBtn = () => {
+	// 	router.push()
+	// }
+
 	return (
 		<div className={s.playerWrapper}>
 			<iframe
@@ -20,11 +47,25 @@ export const VkPlayer = () => {
 			></iframe>
 			<div className={s.icons}>
 				<div className={s.rightIcons}>
-					<LikeIcon />
-					<CommentIcon />
-					<TelegramIcon />
+					<Button type="button" variant="secondary" classname={s.likeBtn} onClick={handleClickLikeBtn}>
+						<LikeIcon className={cn(s.like, { [s.activeLike]: isLike })} />
+					</Button>
+
+					<Button type="button" variant="secondary" classname={s.commentBtn} onClick={handleClickCommentBtn}>
+						<CommentIcon className={cn(s.comment, { [s.activeComment]: isComment })} />
+					</Button>
+
+					<LinkComponent
+						href={`https://telegram.me/share/url?url=${pageUrl}&text=${'Ведущий Юрий Черкунов'}`}
+						classname={s.tgBtn}
+						target="_blank"
+					>
+						<TelegramIcon className={s.tgIcon} />
+					</LinkComponent>
 				</div>
-				<SaveIcon />
+				<Button type="button" variant="secondary" classname={s.saveBtn} onClick={handleClickSaveBtn}>
+					<SaveIcon className={cn(s.saveIcon, { [s.activeSave]: isSave })} />
+				</Button>
 			</div>
 		</div>
 	);
