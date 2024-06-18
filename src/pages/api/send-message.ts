@@ -8,7 +8,7 @@ export default async function SendMessageTg(req: any, res: any) {
 	try {
 		await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_KEY}/sendMessage`, {
 			text: [
-				`${body.values.date}`,
+				`${new Date(body.values.date).toLocaleDateString(['ru'])}`,
 				`${body.values.name}`,
 				`${body.values.phone}`,
 				`${body.values.event === 'Другой вариант' ? `Другой вариант: ${body.values.otherEvent}` : `${body.values.event}`}`,
