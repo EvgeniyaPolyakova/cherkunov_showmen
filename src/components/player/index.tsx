@@ -55,11 +55,7 @@ export const VkPlayer = () => {
 						<CommentIcon className={cn(s.comment, { [s.activeComment]: isComment })} />
 					</Button>
 
-					<LinkComponent
-						href={`https://telegram.me/share/url?url=${pageUrl}&text=${'Ведущий Юрий Черкунов'}`}
-						classname={s.tgBtn}
-						target="_blank"
-					>
+					<LinkComponent href={`https://telegram.me/share/url?url=${pageUrl}`} classname={s.tgBtn} target="_blank">
 						<TelegramIcon className={s.tgIcon} />
 					</LinkComponent>
 				</div>
