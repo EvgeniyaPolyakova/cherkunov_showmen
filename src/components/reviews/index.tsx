@@ -43,7 +43,7 @@ export const Reviews = () => {
 						nextEl: navigationNextRef.current,
 					}}
 					onBeforeInit={swiper => {
-						console.log(swiper);
+						// console.log(swiper);
 
 						// @ts-ignore
 						// eslint-disable-next-line no-param-reassign
@@ -51,8 +51,9 @@ export const Reviews = () => {
 						// @ts-ignore
 						// eslint-disable-next-line no-param-reassign
 						swiper.params.navigation.nextEl = navigationNextRef.current;
-						swiper.navigation.init();
-						swiper.navigation.update();
+						// swiper.navigation.init();
+						// swiper.navigation.update();
+						// console.log(swiper);
 					}}
 					breakpoints={{
 						1000: { slidesPerView: 2 },
