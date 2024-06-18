@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import utils from '@/styles/utils.module.scss';
 import SwiperCore from 'swiper';
 import cn from 'classnames';
@@ -9,15 +9,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import { reviewList } from '@/helpers/review-list';
-import { Button } from '../button';
 import { LinkComponent } from '../link';
-// import axios from 'axios';
 
 SwiperCore.use([Navigation]);
 
 export const Reviews = () => {
-	const navigationPrevRef = useRef(null);
-	const navigationNextRef = useRef(null);
+	const navigationPrevRef = React.useRef(null);
+	const navigationNextRef = React.useRef(null);
 
 	return (
 		<div id="comment" className={s.reviewsContainer}>
@@ -37,17 +35,24 @@ export const Reviews = () => {
 					mousewheel={{ forceToAxis: true }}
 					allowTouchMove
 					autoHeight
+					// modules={[Navigation]}
+					// observer
+					// observeParents
 					navigation={{
 						prevEl: navigationPrevRef.current,
 						nextEl: navigationNextRef.current,
 					}}
 					onBeforeInit={swiper => {
+						console.log(swiper);
+
 						// @ts-ignore
 						// eslint-disable-next-line no-param-reassign
 						swiper.params.navigation.prevEl = navigationPrevRef.current;
 						// @ts-ignore
 						// eslint-disable-next-line no-param-reassign
 						swiper.params.navigation.nextEl = navigationNextRef.current;
+						swiper.navigation.init();
+						swiper.navigation.update();
 					}}
 					breakpoints={{
 						1000: { slidesPerView: 2 },
@@ -81,8 +86,8 @@ export const Reviews = () => {
 					))}
 				</Swiper>
 				{/* </div> */}
-
 				<SwiperNavigation navigationPrevRef={navigationPrevRef} navigationNextRef={navigationNextRef} />
+
 				<LinkComponent
 					href="https://ivanovo.gorko.ru/%D1%82%D0%B0%D0%BC%D0%B0%D0%B4%D0%B0/838431/rating/"
 					classname={s.link}

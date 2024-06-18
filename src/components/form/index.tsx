@@ -65,16 +65,17 @@ export const Form = () => {
 		onSubmit: async values => {
 			try {
 				setIsSending(true);
-				await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_KEY}/sendMessage`, {
-					text: [
-						`${values.date}`,
-						`${values.name}`,
-						`${values.phone}`,
-						`${values.event === 'Другой вариант' ? `Другой вариант: ${values.otherEvent}` : `${values.event}`}`,
-						`${values.comment}`,
-					].join('\n\n'),
-					chat_id: TELEGRAM_CHAT_ID,
-				});
+				await axios.post('/api/send-message', { values });
+				// await axios.post(`https://api.telegram.org/bot${TELEGRAM_BOT_KEY}/sendMessage`, {
+				// 	text: [
+				// 		`${values.date}`,
+				// 		`${values.name}`,
+				// 		`${values.phone}`,
+				// 		`${values.event === 'Другой вариант' ? `Другой вариант: ${values.otherEvent}` : `${values.event}`}`,
+				// 		`${values.comment}`,
+				// 	].join('\n\n'),
+				// 	chat_id: TELEGRAM_CHAT_ID,
+				// });
 				formik.resetForm();
 				setIsSuccessModalOpen(true);
 				toggleBodyScroll();
