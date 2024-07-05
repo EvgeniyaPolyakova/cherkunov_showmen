@@ -27,17 +27,17 @@ export const Services = () => {
 				</div>
 
 				<div className={s.privatePhoto}>
-					<img src="/img/services/services-1.png" />
-					<img src="/img/services/services-2.png" />
-					<img src="/img/services/services-3.png" />
+					<img src="/img/services/services-1.png" alt="Ведущий Юрий Черкунов" />
+					<img src="/img/services/services-2.png" alt="Ведущий Юрий Черкунов" />
+					<img src="/img/services/services-3.png" alt="Ведущий Юрий Черкунов" />
 				</div>
 			</div>
 
 			<div className={s.corporateService}>
 				<div className={s.corporatePhoto}>
-					<img src="/img/services/services-4.png" />
-					<img src="/img/services/services-5.png" />
-					<img src="/img/services/services-6.png" />
+					<img src="/img/services/services-4.png" alt="Ведущий Юрий Черкунов" />
+					<img src="/img/services/services-5.png" alt="Ведущий Юрий Черкунов" />
+					<img src="/img/services/services-6.png" alt="Ведущий Юрий Черкунов" />
 				</div>
 
 				<div className={s.info}>
