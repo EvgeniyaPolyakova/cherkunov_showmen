@@ -44,6 +44,7 @@ const Privacy = () => {
 					type="button"
 					classname={cn(s.topBtn, { [s.visible]: isVisible })}
 					onClick={handleScrollToTop}
+					aria-label="Наверх"
 				>
 					<TopArrow />
 				</Button>
