@@ -135,6 +135,7 @@ export const Form = () => {
 									return (
 										<button
 											type="button"
+											aria-label="Дата события"
 											onClick={openCalendar}
 											className={cn(s.eventDate, { [s.open]: isCalendarOpen })}
 										>
@@ -211,7 +212,13 @@ export const Form = () => {
 				{/* disabled пока отправляется форма
 					обработка успешной отправки формы
 					обработка ошибок */}
-				<Button variant="primary" type="submit" classname={s.submitBtn} disabled={isSending}>
+				<Button
+					variant="primary"
+					type="submit"
+					classname={s.submitBtn}
+					disabled={isSending}
+					aria-label="Отправить заявку"
+				>
 					Отправить
 				</Button>
 				{/* {isSendingSuccess &&  */}

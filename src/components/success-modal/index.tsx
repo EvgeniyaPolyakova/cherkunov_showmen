@@ -21,7 +21,7 @@ export const SuccessModal = ({ isOpen, setIsOpen }: SuccessModalProps) => {
 	return (
 		<div className={s.modalBg}>
 			<div className={s.modalBody}>
-				<Button variant="primary" type="button" classname={s.closeBtn} onClick={handleCloseModal}>
+				<Button variant="primary" type="button" classname={s.closeBtn} onClick={handleCloseModal} aria-label="Закрыть">
 					<CrossIcon />
 				</Button>
 				<div className={s.wrapper}>

@@ -47,19 +47,42 @@ export const VkPlayer = () => {
 			></iframe>
 			<div className={s.icons}>
 				<div className={s.rightIcons}>
-					<Button type="button" variant="secondary" classname={s.likeBtn} onClick={handleClickLikeBtn}>
+					<Button
+						type="button"
+						variant="secondary"
+						classname={s.likeBtn}
+						onClick={handleClickLikeBtn}
+						aria-label="Лайк"
+					>
 						<LikeIcon className={cn(s.like, { [s.activeLike]: isLike })} />
 					</Button>
 
-					<Button type="button" variant="secondary" classname={s.commentBtn} onClick={handleClickCommentBtn}>
+					<Button
+						type="button"
+						variant="secondary"
+						classname={s.commentBtn}
+						onClick={handleClickCommentBtn}
+						aria-label="Комментарий"
+					>
 						<CommentIcon className={cn(s.comment, { [s.activeComment]: isComment })} />
 					</Button>
 
-					<LinkComponent href={`https://telegram.me/share/url?url=${pageUrl}`} classname={s.tgBtn} target="_blank">
+					<LinkComponent
+						href={`https://telegram.me/share/url?url=${pageUrl}`}
+						classname={s.tgBtn}
+						target="_blank"
+						aria-label="Поделиться"
+					>
 						<TelegramIcon className={s.tgIcon} />
 					</LinkComponent>
 				</div>
-				<Button type="button" variant="secondary" classname={s.saveBtn} onClick={handleClickSaveBtn}>
+				<Button
+					type="button"
+					variant="secondary"
+					classname={s.saveBtn}
+					onClick={handleClickSaveBtn}
+					aria-label="Сохранить"
+				>
 					<SaveIcon className={cn(s.saveIcon, { [s.activeSave]: isSave })} />
 				</Button>
 			</div>

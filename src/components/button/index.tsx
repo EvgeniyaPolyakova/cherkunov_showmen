@@ -14,13 +14,14 @@ interface ButtonProps {
 	onClick?: () => void;
 }
 
-export const Button = ({ children, type, variant, classname, disabled, onClick }: ButtonProps) => {
+export const Button = ({ children, type, variant, classname, disabled, onClick, ...props }: ButtonProps) => {
 	return (
 		<button
 			type={type}
 			className={cn(s.button, variant === 'primary' ? s.primary : s.secondary, classname, { [s.disabled]: disabled })}
 			disabled={disabled}
 			onClick={onClick}
+			{...props}
 		>
 			{children}
 		</button>

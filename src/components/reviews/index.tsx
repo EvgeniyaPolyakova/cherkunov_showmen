@@ -67,7 +67,7 @@ export const Reviews = () => {
 									{review.avatarType === 'svg' ? (
 										<div className={s.avatarSvg}>{React.createElement(review.avatar)}</div>
 									) : (
-										<img src={review.avatar} width={120} height={120} className={s.avatar} />
+										<img src={review.avatar} width={120} height={120} className={s.avatar} alt={review.name} />
 									)}
 
 									<div className={s.stars}>
