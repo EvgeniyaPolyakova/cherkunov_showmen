@@ -42,6 +42,7 @@ export const VkPlayer = () => {
 				height="480"
 				allow="autoplay; encrypted-media; fullscreen; picture-in-picture;"
 				className={s.player}
+				title="Ведущий Юрий Черкунов"
 				// frameborder="0"
 				// allowfullscreen
 			></iframe>
