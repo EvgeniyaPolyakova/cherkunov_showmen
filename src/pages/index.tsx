@@ -15,7 +15,7 @@ const MainPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Ведущий Юрий Черкунов</title>
+				<title>Юрий Черкунов - ведущий мероприятий</title>
 			</Head>
 			<Layout>
 				<Intro />
