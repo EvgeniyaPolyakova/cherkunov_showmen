@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /privacy
+
+Allow: /*.js
+Allow: /*.css
+Allow: *.jpeg
+Allow: *.webp
+Allow: *.png
+Allow: *.jpg
+Allow: *.gif
